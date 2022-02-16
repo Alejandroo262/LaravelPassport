@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('loguear', [\App\Http\Controllers\LoginController::class, 'loguear']);
 Route::post('registrar', [\App\Http\Controllers\RegistrarController::class, 'registrar']);
 Route::get('info', [\App\Http\Controllers\LoginController::class, 'info'])->middleware('auth:api');
+Route::post('borrarToken', [\App\Http\Controllers\BorrarTokenController::class, 'borrarToken'])->middleware('auth:api');
